@@ -16,19 +16,19 @@ CORS(app)
 # SUPERSET CONFIGURATION
 # ============================================================
 
-SUPERSET_URL = "http://127.0.0.1:8088"
+SUPERSET_URL = os.getenv("SUPERSET_URL")
 
-SUPERSET_USERNAME = "admin"
+SUPERSET_USERNAME = os.getenv("SUPERSET_USERNAME")
 
-SUPERSET_PASSWORD = "Harsha@1003"
+SUPERSET_PASSWORD = os.getenv("SUPERSET_PASSWORD")
 
-SUPERSET_PROVIDER = "db"
+SUPERSET_PROVIDER = os.getenv("SUPERSET_PROVIDER", "db")
 
-SUPERSET_REFRESH = True
+SUPERSET_REFRESH = s.getenv("SUPERSET_REFRESH", "True").lower() == "true"
 
 # Your embedded dashboard UUID
-SUPERSET_DASHBOARD_UUID = (
-    "e7023b4c-9459-44c8-b672-0e3adefdbfc1"
+SUPERSET_DASHBOARD_UUID = os.getenv(
+    "SUPERSET_DASHBOARD_UUID"
 )
 
 
