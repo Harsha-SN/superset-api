@@ -24,7 +24,7 @@ SUPERSET_PASSWORD = os.getenv("SUPERSET_PASSWORD")
 
 SUPERSET_PROVIDER = os.getenv("SUPERSET_PROVIDER", "db")
 
-SUPERSET_REFRESH = s.getenv("SUPERSET_REFRESH", "True").lower() == "true"
+SUPERSET_REFRESH = os.getenv("SUPERSET_REFRESH", "True").lower() == "true"
 
 # Your embedded dashboard UUID
 SUPERSET_DASHBOARD_UUID = os.getenv(
